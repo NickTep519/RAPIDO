@@ -14,7 +14,7 @@ class Race extends Model
         'arrival_point',
         'starting_date_time',
         'arrival_date_time',
-        'race-status',
+        'race_status',
     ] ; 
 
     protected $dates = [

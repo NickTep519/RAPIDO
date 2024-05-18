@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('arrival_point') ; 
             $table->timestamp('starting_date_time') ; 
             $table->timestamp('arrival_date_time') ; 
-            $table->enum('race-status', ['on_hold','in_progress', 'arrived'])->default('on_hold') ; 
+            $table->enum('race_status', ['En attente','En cours', 'Terminée'])->default('En attente') ; 
             $table->timestamps();
 
             $table->foreignIdFor(Driver::class)->nullable()->constrained()->cascadeOnDelete() ; 

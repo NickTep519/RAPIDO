@@ -21,7 +21,7 @@ class RaceFactory extends Factory
             'arrival_point' => $this->faker->city(),
             'starting_date_time' => $this->faker->dateTime(),
             'arrival_date_time' => $this->faker->dateTime(),
-            'race-status' => $this->faker->randomElement(['on_hold','in_progress', 'arrived']),
+            'race_status' => $this->faker->randomElement(['En attente','En cours', 'Terminée']),
         ];
     }
 }
