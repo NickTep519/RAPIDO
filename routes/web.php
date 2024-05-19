@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('race', RaceController::class)->except(['index', 'show']) ; 
-Route::resource('driver', DriverController::class)->except(['index', 'show']) ; 
+Route::resource('races', RaceController::class)->except(['show']) ; 
+Route::resource('drivers', DriverController::class)->except(['index', 'show']) ; 
 
 require __DIR__.'/auth.php';

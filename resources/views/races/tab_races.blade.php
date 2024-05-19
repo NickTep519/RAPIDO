@@ -19,13 +19,17 @@
                     <td>{{$race->driver?->name}} {{$race->driver?->first_name}}</td>
                     <td>{{$race->race_status}}</td>
                     <td>
-                        <a href="{{route('race.edit',$race)}}">Edit</a>/
-                        
-                        <form action="{{route('race.destroy', $race)}}" method="post">
-                            @csrf
-                            @method('delete')
-                            <button>sup</button>
-                        </form>
+                        <div class="races-buttons">
+                            <a href="{{route('races.edit', $race)}}">
+                                <button class="races-btn">Modifier</button>
+                            </a>
+                    
+                            <form action="{{route('races.destroy', $race)}}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button class="races-btn">Supprimer</button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
 

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <nav>
             <ul class="liste-items">
                 <li class="items"> <a href="{{route('home.index')}}">RAPIDO</a> </li>
@@ -20,6 +20,7 @@
                 <li class="items"> <a href="{{route('home.index')}}"></a> </li>
                 <li class="items"> <a href="{{route('home.index')}}"></a> </li>
                 <li class="items"> <a href="{{route('home.index')}}"></a> </li>
+                <li class="items"> <a href="{{route('races.index')}}">Les courses</a> </li>
 
 
                 @guest

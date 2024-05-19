@@ -10,6 +10,11 @@
     <title>{{$race->exists ? 'Modifier la course' : 'Ajouter une course'}}</title>
 </head>
 <body>
+
+    @php
+            
+    @endphp
+
     <div class="container" >
 
         <div class="form">
@@ -18,7 +23,7 @@
                 <h2>{{$race->exists ? 'Modifier la course' : 'Ajouter une course'}}</h2>
             </div>
 
-            <form action="{{route($race->exists ? 'race.update' : 'race.create', $race)}}" method="POST" >
+            <form action="{{route($race->exists ? 'races.update' : 'races.create', $race)}}" method="POST" >
                 @csrf
                 @method($race->exists ? 'PUT' : 'POST')
 
@@ -26,7 +31,7 @@
                 @include('shared.input', ['name'=>'arrival_point', 'label'=>'Point d\'arrivee', 'value'=>$race->arrival_point ])
                 @include('shared.input', ['type'=>'datetime-local','name'=>'starting_date_time', 'label'=>'Date et heure de depart', 'value'=>$race->starting_date_time ])
                 @include('shared.input', ['type'=>'datetime-local','name'=>'arrival_date_time', 'label'=>'Date et heure d\'arrivee', 'value'=>$race->arrival_date_time ])
-
+                @include('shared.select', ['name'=>, ])
             </form>
 
         </div>

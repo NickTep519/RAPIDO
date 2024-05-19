@@ -9,6 +9,16 @@ use Illuminate\Http\Request;
 
 class RaceController extends Controller
 {
+
+    public function index() {
+
+        $races = Race::with('driver')->orderBy('created_at', 'asc')->paginate(25) ; 
+
+        return view('races.index', [
+            'races' => $races
+        ]) ; 
+
+    }
    
     
     public function create()
